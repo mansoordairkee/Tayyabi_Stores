@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tayyabi Stores | Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #ffffff;
+  color: #1d1d1f;
+}
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      column-count: 4;
+      column-gap: 12px;
+    }
+
+    .gallery img {
+      width: 100%;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      display: block;
+      transition: transform 0.2s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive Columns */
+    @media (max-width: 1200px) {
+      .gallery {
+        column-count: 3;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .gallery {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .gallery {
+        column-count: 1;
+      }
+    }
+
+    body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #ffffff;
+  color: #1d1d1f;
+}
+
+.topbar {
+  padding: 16px 24px;
+  background-color: #7fd7dd;
+  border-bottom: 1px solid #d2d2d7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.hero h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 10px;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+  border-bottom: 2px solid black;
+  font-weight: 600;
+}
+
+header img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+.section-header {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+/* Contact Us */
+
+.contact-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+  color: #333;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-section h2 span {
+  font-weight: bold;
+  color: #000;
+}
+
+.contact-section .subtitle {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 40px;
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  flex: 0 1 200px;
+  text-align: center;
+}
+
+.contact-card img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.contact-card h4 {
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.contact-card p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+
+  </style>
+</head>
+<body>
+
+    <header class="topbar">
+    <img src="app_logo.jpg" alt="Tayyabi Logo" class="logo">
+    <h2>Tayyabi Stores</h2>
+  </header>
+
+    <div class="tabs">
+    <a href="index.html">
+    <button class="tab active">Browse by Product</button>
+    </a>
+    <a href="Gallery.html">
+    <button class="tab active">Gallery</button>
+    </a>
+  </div>
+
+  <h1>Explore</h1>
+  <div class="gallery">
+    <img src="Photos/1.jpg" alt="Photo 1">
+    <img src="Photos/2.jpg" alt="Photo 2">
+    <img src="Photos/3.jpg" alt="Photo 3">
+    <img src="Photos/4.jpg" alt="Photo 4">
+    <img src="Photos/5.jpg" alt="Photo 5">
+    <img src="Photos/6.jpg" alt="Photo 6">
+    <img src="Photos/7.jpg" alt="Photo 7">
+    <img src="Photos/8.jpg" alt="Photo 8">
+    <img src="Photos/9.jpg" alt="Photo 9">
+    <img src="Photos/10.jpg" alt="Photo 10">
+    <img src="Photos/11.jpg" alt="Photo 11">
+    <img src="Photos/12.jpg" alt="Photo 12">
+    <img src="Photos/13.jpg" alt="Photo 13">
+    <img src="Photos/14.jpg" alt="Photo 14">
+    <img src="Photos/15.jpg" alt="Photo 15">
+    <img src="Photos/16.jpg" alt="Photo 16">
+    <img src="Photos/17.jpg" alt="Photo 17">
+    <img src="Photos/18.jpg" alt="Photo 18">
+  </div>
+
+  <section class="contact-section">
+  <h2>Contact <span>Us</span></h2>
+  
+  <div class="contact-grid">
+    <div class="contact-card">
+      <img src="Icons/Location.jpg" alt="Location Icon">
+      <h4>ADDRESS</h4>
+      <a href="https://maps.app.goo.gl/wkXei6YnAJXD1wbR8?g_st=aw">
+      <p>30, Dana Oli Tayyabi Stores</p>
+      </a>
+    </div>
+    <div class="contact-card">
+      <img src="Icons/Phone.jpg" alt="Phone Icon">
+      <h4>PHONE</h4>
+      <p>+91-9826078061</p>
+    </div>
+    <div class="contact-card">
+      <img src="Icons/Email.jpg" alt="Email Icon">
+      <h4>EMAIL</h4>
+      <p>tayyabistores@gmail.com</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
