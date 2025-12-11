@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Products - Tayyabi Stores</title>
+  <meta name="description" content="Browse products from this premium brand at Tayyabi Stores.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <section id="brand-header" class="brand-header">
+    <div class="container">
+      <div class="brand-header-content">
+        <img id="brand-logo" src="" alt="" class="brand-header-logo">
+        <div>
+          <h1 id="brand-name"></h1>
+          <p id="brand-description"></p>
+          <p id="product-count" style="margin-top: 0.5rem; opacity: 0.9;"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div id="products-grid" class="product-grid"></div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    // Initialize page
+    initPage('brands');
+    
+    // Get brand from URL
+    const brandSlug = getUrlParam('brand');
+    const brand = getBrandBySlug(brandSlug);
+    
+    if (brand) {
+      // Update page title
+      document.title = `${brand.name} Products - Tayyabi Stores`;
+      
+      // Update header
+      document.getElementById('brand-logo').src = brand.logo;
+      document.getElementById('brand-logo').alt = brand.name;
+      document.getElementById('brand-name').textContent = brand.name;
+      document.getElementById('brand-description').textContent = brand.description;
+      
+      // Get and display products
+      const brandProducts = getProductsByBrand(brand.name);
+      document.getElementById('product-count').textContent = `${brandProducts.length} Products Available`;
+      
+      const productsGrid = document.getElementById('products-grid');
+      productsGrid.innerHTML = brandProducts.map(renderProductCard).join('');
+    } else {
+      // Brand not found
+      document.getElementById('brand-header').innerHTML = `
+        <div class="container" style="text-align: center;">
+          <h1>Brand Not Found</h1>
+          <p>The requested brand could not be found.</p>
+          <a href="brands.html" class="btn btn-outline" style="margin-top: 1rem;">View All Brands</a>
+        </div>
+      `;
+      document.querySelector('.section').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
