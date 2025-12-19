@@ -1,4 +1,4 @@
-// Tayyabi Stores - Common Functions
+  // Tayyabi Stores - Common Functions
 
 // Theme management
 function initTheme() {
@@ -132,8 +132,8 @@ const chatbotKnowledge = {
     address: "We're located at 30, Dana Oli, Neemuch, Madhya Pradesh, India - 458441. Come visit us!",
     hours: "Our business hours are:\n- Monday to Saturday: 10:00 AM - 8:00 PM\n- Sunday: 10:00 AM - 2:00 PM",
     timing: "Our business hours are:\n- Monday to Saturday: 10:00 AM - 8:00 PM\n- Sunday: 10:00 AM - 2:00 PM",
-    contact: "You can reach us at:\n- Phone: +91 9419002090 or +91 9419003090\n- Email: info@tayyabistore.com\n- Visit: Fateh Kadal, Srinagar",
-    phone: "Call us at +91 9419002090 or +91 9419003090. We're happy to help!",
+    contact: "You can reach us at:\n- Phone: +91 9826078061 or +91 8827417253\n- Email: tayyabistores@gmail.com\n- Visit: 30, Dana Oli, Neemuch",
+    phone: "Call us at +91 9826078061 or +91 8827417253. We're happy to help!",
     
     // Brands
     brands: "We are authorized dealers for 10 premium brands:\n- Jaquar (Bathroom fittings)\n- Artize (Luxury sanitaryware)\n- Essco (Quality bath products)\n- Astral (Pipes & plumbing)\n- Zoloto (Valves)\n- Nirali (Kitchen sinks)\n- Faber (Kitchen appliances)\n- Wilo Pumps (Water pumps)\n- Ardex Endura (Building materials)\n- Zero B (Water purifiers)",
