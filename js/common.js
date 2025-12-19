@@ -107,7 +107,7 @@ function renderFooter() {
               <li style="color: rgba(255,255,255,0.7);">30, Dana Oli Tayyabi Stores</li>
               <li style="color: rgba(255,255,255,0.7);">Madhya Pradesh, India</li>
               <li><a href="tel:+919826078061">+91 9826078061</a></li>
-               <li style="color: rgba(255,255,255,0.7);">Tayyabi Stores</li>
+               <br>
               <li style="color: rgba(255,255,255,0.7);">7, Madhav villa, Above IDBI Bank</li>
               <li style="color: rgba(255,255,255,0.7);">Madhya Pradesh, India</li>
               <li><a href="tel:+918827417253">+91 8827417253</a></li>
