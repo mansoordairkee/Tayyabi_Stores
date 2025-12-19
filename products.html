@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Tayyabi Stores</title>
+  <meta name="description" content="Browse our complete collection of premium sanitary ware and plumbing products. Filter by brand and category.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Our Products</h1>
+      <p class="section-subtitle">Browse our complete collection of premium sanitary ware and plumbing products</p>
+
+      <!-- Filters -->
+      <div class="filters">
+        <div class="filter-row">
+          <input type="text" id="search-input" class="search-input" placeholder="Search products...">
+          <select id="category-filter" class="filter-select">
+            <option value="All">All Categories</option>
+            <option value="Bathroom Fittings">Bathroom Fittings</option>
+            <option value="Kitchen Fittings">Kitchen Fittings</option>
+            <option value="Kitchen Appliances">Kitchen Appliances</option>
+            <option value="Plumbing">Plumbing</option>
+            <option value="Building Materials">Building Materials</option>
+          </select>
+          <select id="brand-filter" class="filter-select">
+            <option value="All">All Brands</option>
+          </select>
+          <button id="clear-filters" class="btn btn-secondary">Clear Filters</button>
+        </div>
+      </div>
+
+      <p id="results-count" class="results-count"></p>
+      <div id="products-grid" class="product-grid"></div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/data.js?v=2"></script>
+  <script src="js/common.js"></script>
+  <script>
+    // Initialize page
+    initPage('products');
+    
+    // Populate brand filter
+    const brandFilter = document.getElementById('brand-filter');
+    brands.forEach(brand => {
+      const option = document.createElement('option');
+      option.value = brand.name;
+      option.textContent = brand.name;
+      brandFilter.appendChild(option);
+    });
+    
+    // Get elements
+    const searchInput = document.getElementById('search-input');
+    const categoryFilter = document.getElementById('category-filter');
+    const clearBtn = document.getElementById('clear-filters');
+    const productsGrid = document.getElementById('products-grid');
+    const resultsCount = document.getElementById('results-count');
+    
+    // Check URL params for initial filters
+    const urlCategory = getUrlParam('category');
+    const urlBrand = getUrlParam('brand');
+    if (urlCategory) categoryFilter.value = urlCategory;
+    if (urlBrand) brandFilter.value = urlBrand;
+    
+    // Render products function
+    function renderProducts() {
+      const options = {
+        category: categoryFilter.value,
+        brand: brandFilter.value,
+        search: searchInput.value
+      };
+      
+      const filtered = filterProducts(options);
+      resultsCount.textContent = `Showing ${filtered.length} products`;
+      productsGrid.innerHTML = filtered.map(renderProductCard).join('');
+      
+      if (filtered.length === 0) {
+        productsGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 2rem; color: var(--muted-foreground);">No products found matching your criteria.</p>';
+      }
+    }
+    
+    // Event listeners
+    searchInput.addEventListener('input', renderProducts);
+    categoryFilter.addEventListener('change', renderProducts);
+    brandFilter.addEventListener('change', renderProducts);
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      categoryFilter.value = 'All';
+      brandFilter.value = 'All';
+      renderProducts();
+    });
+    
+    // Initial render
+    renderProducts();
+  </script>
+</body>
+</html>

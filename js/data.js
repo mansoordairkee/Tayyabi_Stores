@@ -1,0 +1,177 @@
+// Tayyabi Stores - Product and Brand Data
+
+const brands = [
+  { id: "jaquar", name: "Jaquar", description: "Premium bathroom fittings and accessories", logo: "assets/brands/jaquar.jpg", website: "https://www.jaquar.com" },
+  { id: "artize", name: "Artize", description: "Luxury sanitaryware and bath fittings", logo: "assets/brands/artize.png", website: "https://www.artize.in" },
+  { id: "essco", name: "Essco", description: "Quality bath products and accessories", logo: "assets/brands/essco.jpg", website: "https://www.essco.in" },
+  { id: "astral", name: "Astral", description: "Pipes and plumbing fittings", logo: "assets/brands/astral.jpg", website: "https://www.astralpipes.com" },
+  { id: "zoloto", name: "Zoloto", description: "Valves and plumbing accessories", logo: "assets/brands/zoloto.png", website: "https://www.zoloto.com" },
+  { id: "nirali", name: "Nirali", description: "Kitchen sinks and solutions", logo: "assets/brands/nirali.jpeg", website: "https://www.nirali.com" },
+  { id: "faber", name: "Faber", description: "Kitchen chimneys and appliances", logo: "assets/brands/faber.png", website: "https://www.faber-india.com" },
+  { id: "wilo-pumps", name: "Wilo Pumps", description: "Water pump systems and solutions", logo: "assets/brands/wilo_pumps.png", website: "https://wilo.com/in/en" },
+  { id: "ardex-endura", name: "Ardex Endura", description: "Building chemicals and waterproofing", logo: "assets/brands/ardex_endura.jpeg", website: "https://www.ardexendura.com" },
+  { id: "zero-b", name: "Zero B", description: "Water purifiers and filtration systems", logo: "assets/brands/zero_b.png", website: "https://www.zerob.com" }
+];
+
+// Brand website lookup
+const brandWebsites = {
+  "Jaquar": "https://www.jaquar.com",
+  "Artize": "https://www.artize.in",
+  "Essco": "https://www.essco.in",
+  "Astral": "https://www.astralpipes.com",
+  "Zoloto": "https://www.zoloto.com",
+  "Nirali": "https://www.nirali.com",
+  "Faber": "https://www.faber-india.com",
+  "Wilo Pumps": "https://wilo.com/in/en",
+  "Ardex Endura": "https://www.ardexendura.com",
+  "Zero B": "https://www.zerob.com"
+};
+
+const products = [
+  // Jaquar Products (15)
+  { id: 1, name: "Faucets", category: "Bathroom Fittings", brand: "Jaquar", description: "Premium bathroom faucets with chrome finish and ceramic cartridge for smooth, long-lasting operation.", image: "assets/products/jaquar/Faucets.jpg", productUrl: "https://www.jaquar.com/en/faucets", features: ["Chrome finish", "Ceramic cartridge", "Premium quality", "Long-lasting"] },
+  { id: 2, name: "Showers", category: "Bathroom Fittings", brand: "Jaquar", description: "Luxury shower systems including rainfall and hand showers for ultimate bathing experience.", image: "assets/products/jaquar/Shower.jpg", productUrl: "https://www.jaquar.com/en/showers", features: ["Rainfall experience", "Premium finish", "Easy installation", "Water efficient"] },
+  { id: 3, name: "Cloud Showers", category: "Bathroom Fittings", brand: "Jaquar", description: "Revolutionary cloud shower technology for spa-like experience at home.", image: "assets/products/jaquar/Cloud.jpg", productUrl: "https://www.jaquar.com/en/qloud-shower", features: ["Cloud technology", "Spa experience", "Modern design", "Innovative"] },
+  { id: 4, name: "Sanitaryware", category: "Bathroom Fittings", brand: "Jaquar", description: "Comprehensive range of premium sanitaryware including WCs, basins, and urinals.", image: "assets/products/jaquar/Sanitaryware.jpg", productUrl: "https://www.jaquar.com/en/jaquar-sanitary-ware", features: ["Ceramic construction", "Modern designs", "Easy to clean", "Durable"] },
+  { id: 5, name: "Water Heaters", category: "Bathroom Fittings", brand: "Jaquar", description: "Energy-efficient water heaters for instant hot water supply in bathrooms.", image: "assets/products/jaquar/Water Heater.jpg", productUrl: "https://www.jaquar.com/en/water-heaters-for-bathroom", features: ["Energy efficient", "Instant heating", "Safe operation", "Long life"] },
+  { id: 6, name: "Whirlpools", category: "Bathroom Fittings", brand: "Jaquar", description: "Luxury whirlpool bathtubs for relaxation and hydrotherapy at home.", image: "assets/products/jaquar/Whirlpool.jpg", productUrl: "https://www.jaquar.com/en/whirlpools-bathtubs", features: ["Hydrotherapy jets", "Luxury experience", "Durable construction", "Spa quality"] },
+  { id: 7, name: "Bath Tubs", category: "Bathroom Fittings", brand: "Jaquar", description: "Elegant freestanding and built-in bathtubs for modern bathrooms.", image: "assets/products/jaquar/Bath Tubs.jpg", productUrl: "https://www.jaquar.com/en/luxury-bath-tub", features: ["Freestanding & built-in", "Elegant designs", "Comfortable", "Premium quality"] },
+  { id: 8, name: "Spas", category: "Bathroom Fittings", brand: "Jaquar", description: "Home spa solutions for ultimate relaxation and wellness.", image: "assets/products/jaquar/Spas.jpg", productUrl: "https://www.jaquar.com/en/jaquar-home-spas", features: ["Spa experience", "Wellness focused", "Luxury design", "Premium features"] },
+  { id: 9, name: "Saunas", category: "Bathroom Fittings", brand: "Jaquar", description: "Premium sauna systems for health and relaxation at home.", image: "assets/products/jaquar/Sauna.jpg", productUrl: "https://www.jaquar.com/en/sauna", features: ["Health benefits", "Easy to use", "Premium construction", "Relaxation"] },
+  { id: 10, name: "Shower Enclosures", category: "Bathroom Fittings", brand: "Jaquar", description: "Modern glass shower enclosures for contemporary bathrooms.", image: "assets/products/jaquar/Shower Enclosure.jpg", productUrl: "https://www.jaquar.com/en/shower-enclosures", features: ["Tempered glass", "Modern design", "Easy maintenance", "Durable frames"] },
+  { id: 11, name: "Steam Bath Solutions", category: "Bathroom Fittings", brand: "Jaquar", description: "Complete steam bath systems for home wellness and relaxation.", image: "assets/products/jaquar/Steam Bath Solutions.jpg", productUrl: "https://www.jaquar.com/en/steam-bath-solutions", features: ["Steam therapy", "Wellness benefits", "Complete system", "Easy control"] },
+  { id: 12, name: "Shower Panels", category: "Bathroom Fittings", brand: "Jaquar", description: "Integrated shower panels with multiple water outlets and massage jets.", image: "assets/products/jaquar/Shower Panels.jpg", productUrl: "https://www.jaquar.com/en/jaquar-bathroom-shower-wall-panels", features: ["Multiple outlets", "Massage jets", "Integrated design", "Premium finish"] },
+  { id: 13, name: "Flushing Systems", category: "Bathroom Fittings", brand: "Jaquar", description: "Advanced flushing systems for water-efficient toilet operation.", image: "assets/products/jaquar/Flushing Systems.jpg", productUrl: "https://www.jaquar.com/en/toilet-flushing-systems", features: ["Water efficient", "Dual flush", "Silent operation", "Reliable"] },
+  { id: 14, name: "Accessories", category: "Bathroom Fittings", brand: "Jaquar", description: "Complete range of bathroom accessories including towel bars, soap dispensers, and more.", image: "assets/products/jaquar/Accessories.jpg", productUrl: "https://www.jaquar.com/en/accessories-range", features: ["Complete range", "Premium finish", "Modern designs", "Durable"] },
+  { id: 15, name: "Diverters & Shower Valves", category: "Bathroom Fittings", brand: "Jaquar", description: "Precision-engineered diverters and shower valves for optimal water control.", image: "assets/products/jaquar/Diverter & Shower Valve.jpg", productUrl: "https://www.jaquar.com/en/shower-valves", features: ["Precise control", "Premium quality", "Easy operation", "Long-lasting"] },
+  
+  // Artize Products (5)
+  { id: 16, name: "Faucets", category: "Bathroom Fittings", brand: "Artize", description: "Designer faucets born from art, combining aesthetics with functionality.", image: "assets/products/artize/Faucets.jpg", productUrl: "https://www.artize.com/in/faucets", features: ["Artistic design", "Premium finish", "Innovative technology", "Luxury"] },
+  { id: 17, name: "Showers", category: "Bathroom Fittings", brand: "Artize", description: "Luxury shower systems with cutting-edge design and technology.", image: "assets/products/artize/Showers.jpg", productUrl: "https://www.artize.com/in/showers", features: ["Designer aesthetics", "Advanced features", "Premium materials", "Luxury experience"] },
+  { id: 18, name: "Sanitaryware", category: "Bathroom Fittings", brand: "Artize", description: "Premium ceramic sanitaryware with artistic designs for luxury bathrooms.", image: "assets/products/artize/Sanitaryware.jpg", productUrl: "https://www.artize.com/in/ceramics", features: ["Artistic designs", "Premium ceramic", "Luxury finish", "Contemporary"] },
+  { id: 19, name: "Wellness", category: "Bathroom Fittings", brand: "Artize", description: "Wellness-focused bathroom products for complete relaxation and rejuvenation.", image: "assets/products/artize/Wellness.jpg", productUrl: "https://www.artize.com/in/wellness", features: ["Wellness focused", "Spa experience", "Premium quality", "Relaxation"] },
+  { id: 20, name: "Flushing Systems", category: "Bathroom Fittings", brand: "Artize", description: "Designer flushing systems with advanced technology and elegant design.", image: "assets/products/artize/Flushing Systems.jpg", productUrl: "https://www.artize.com/in/flushing-system", features: ["Designer aesthetics", "Advanced technology", "Water efficient", "Quiet operation"] },
+  
+  // Essco Products (7)
+  { id: 21, name: "Faucets", category: "Bathroom Fittings", brand: "Essco", description: "Economical yet quality bathroom faucets for every home.", image: "assets/products/essco/Faucets.jpg", productUrl: "https://www.esscobathware.com/en-gb/faucets", features: ["Quality construction", "Affordable", "Chrome finish", "Reliable"] },
+  { id: 22, name: "Sanitaryware", category: "Bathroom Fittings", brand: "Essco", description: "Complete range of sanitaryware combining quality and economy.", image: "assets/products/essco/Sanitaryware.jpg", productUrl: "https://www.esscobathware.com/en-gb/sanitaryware", features: ["Quality ceramic", "Affordable pricing", "Modern designs", "Durable"] },
+  { id: 23, name: "Showers", category: "Bathroom Fittings", brand: "Essco", description: "Reliable shower systems offering great value for money.", image: "assets/products/essco/Showers.jpg", productUrl: "https://www.esscobathware.com/en-gb/showers", features: ["Reliable performance", "Good value", "Easy installation", "Quality finish"] },
+  { id: 24, name: "Cisterns", category: "Bathroom Fittings", brand: "Essco", description: "Efficient cisterns with dual-flush technology for water conservation.", image: "assets/products/essco/Cisterns.jpg", productUrl: "https://www.esscobathware.com/en-gb/cisterns", features: ["Dual flush", "Water saving", "Reliable operation", "Easy maintenance"] },
+  { id: 25, name: "Allied Items", category: "Bathroom Fittings", brand: "Essco", description: "Comprehensive range of bathroom allied items and mechanisms.", image: "assets/products/essco/Allied Items.jpg", productUrl: "https://www.esscobathware.com/en-gb/allied-bathfittings-mechanisms", features: ["Complete range", "Quality construction", "Reliable", "Affordable"] },
+  { id: 26, name: "Bathroom Accessories", category: "Bathroom Fittings", brand: "Essco", description: "Essential bathroom accessories for complete bathroom solutions.", image: "assets/products/essco/Bathroom Accessories.jpg", productUrl: "https://www.esscobathware.com/en-gb/accessories", features: ["Essential accessories", "Quality finish", "Affordable", "Durable"] },
+  { id: 27, name: "Water Heaters", category: "Bathroom Fittings", brand: "Essco", description: "Energy-efficient water heaters for comfortable bathing experience.", image: "assets/products/essco/Water Heaters.jpg", productUrl: "https://www.esscobathware.com/en-gb/water-heaters", features: ["Energy efficient", "Reliable heating", "Safe operation", "Good value"] },
+  
+  // Astral Products (12)
+  { id: 28, name: "Plumbing Pipes & Fittings", category: "Plumbing", brand: "Astral", description: "Premium quality UPVC/CPVC pipes and fittings for plumbing applications.", image: "assets/products/astral/Plumbing Pipes & Fittings.jpg", productUrl: "https://www.astralpipes.com/plumbing-pipes-fittings/", features: ["Premium quality", "Corrosion resistant", "Long life", "ISI certified"] },
+  { id: 29, name: "Sewerage Drainage Pipes & Fittings", category: "Plumbing", brand: "Astral", description: "Durable sewerage and drainage pipe systems for efficient waste management.", image: "assets/products/astral/Sewerage Drainage Pipes & Fittings.jpg", productUrl: "https://www.astralpipes.com/sewerage-drainage-pipes-fittings/", features: ["Durable construction", "Leak proof", "Easy installation", "Long-lasting"] },
+  { id: 30, name: "Agriculture Pipes & Fittings", category: "Plumbing", brand: "Astral", description: "Specialized pipes and fittings for agricultural irrigation systems.", image: "assets/products/astral/Agriculture Pipes & Fittings.jpg", productUrl: "https://www.astralpipes.com/agriculture-pipes-fittings/", features: ["UV resistant", "Durable", "Weather resistant", "Cost effective"] },
+  { id: 31, name: "Water Tanks", category: "Plumbing", brand: "Astral", description: "Multi-layered water storage tanks with food-grade material.", image: "assets/products/astral/Water Tanks.jpg", productUrl: "https://www.astralpipes.com/water-tanks/", features: ["Multi-layered", "Food grade", "UV resistant", "Long life"] },
+  { id: 32, name: "Industrial Pipes & Fittings", category: "Plumbing", brand: "Astral", description: "Heavy-duty pipes and fittings for industrial applications.", image: "assets/products/astral/Industrial Pipes & Fittings.jpg", productUrl: "https://www.astralpipes.com/industrial-pipes-fittings/", features: ["Heavy duty", "Chemical resistant", "High pressure", "Industrial grade"] },
+  { id: 33, name: "Cable Protection", category: "Plumbing", brand: "Astral", description: "Protective conduits for electrical and communication cables.", image: "assets/products/astral/Cable Protection.jpg", productUrl: "https://www.astralpipes.com/cable-protection/", features: ["Cable protection", "Durable", "Flame retardant", "Easy installation"] },
+  { id: 34, name: "Fire Sprinkler Pipes & Fittings", category: "Plumbing", brand: "Astral", description: "Fire safety sprinkler system pipes and fittings meeting international standards.", image: "assets/products/astral/Fire Sprinklers Pipes & Fittings.jpg", productUrl: "https://www.astralpipes.com/fire-sprinklers-pipes-fittings/", features: ["Fire safety", "International standards", "Reliable", "Quality assured"] },
+  { id: 35, name: "Urban Infrastructure", category: "Plumbing", brand: "Astral", description: "Large diameter pipes for urban infrastructure and public utility projects.", image: "assets/products/astral/Urban Infrastructure.jpg", productUrl: "https://www.astralpipes.com/urban-infrastructure/", features: ["Large diameter", "High strength", "Long life", "Project grade"] },
+  { id: 36, name: "Ancillary Products", category: "Plumbing", brand: "Astral", description: "Supporting products and accessories for complete piping solutions.", image: "assets/products/astral/Ancillary Products.jpg", productUrl: "https://www.astralpipes.com/ancillary-products/", features: ["Complete solutions", "Quality accessories", "Compatible", "Reliable"] },
+  { id: 37, name: "Solvent Cement", category: "Plumbing", brand: "Astral", description: "High-strength solvent cement for joining UPVC/CPVC pipes.", image: "assets/products/astral/Solvent Cement.jpg", productUrl: "https://www.astralpipes.com/solvent-cement/", features: ["High strength", "Quick setting", "Leak proof joints", "Easy application"] },
+  { id: 38, name: "Insulation Tube", category: "Plumbing", brand: "Astral", description: "Thermal insulation tubes for pipes to prevent heat loss.", image: "assets/products/astral/Insulation Tube.jpg", productUrl: "https://www.astralpipes.com/insulation-tube/", features: ["Thermal insulation", "Energy saving", "Easy installation", "Durable"] },
+  { id: 39, name: "Specialty Fittings", category: "Plumbing", brand: "Astral", description: "Specialized fittings for unique plumbing requirements.", image: "assets/products/astral/Specialty Fittings.jpg", productUrl: "https://www.astralpipes.com/specialty-fittings/ ", features: ["Specialized solutions", "Quality construction", "Reliable", "Versatile"] },
+  
+  // Zoloto Products (13)
+  { id: 40, name: "Globe Valves", category: "Plumbing", brand: "Zoloto", description: "Precision-engineered globe valves for flow regulation and shut-off.", image: "assets/products/zoloto/Globe Valves.jpg", productUrl: "https://www.zolotovalves.com/according-to-valve-type/#", features: ["Precise control", "Brass construction", "Leak proof", "Long life"] },
+  { id: 41, name: "Gate Valves / Sluice Valves", category: "Plumbing", brand: "Zoloto", description: "Heavy-duty gate valves for on/off control in plumbing systems.", image: "assets/products/zoloto/Gate Valves_Sluice Valves.jpg", productUrl: "https://www.zolotovalves.com/according-to-valve-type/#", features: ["Heavy duty", "Full bore", "Minimal pressure drop", "Reliable"] },
+  { id: 42, name: "Check Valves / NRV", category: "Plumbing", brand: "Zoloto", description: "Non-return valves to prevent backflow in piping systems.", image: "assets/products/zoloto/Check Valves_NRV.jpg", productUrl: "https://www.zolotovalves.com/according-to-valve-type/#", features: ["Prevents backflow", "Reliable operation", "Durable", "Low maintenance"] },
+  { id: 43, name: "Ball Valves", category: "Plumbing", brand: "Zoloto", description: "Quarter-turn ball valves for quick on/off control.", image: "assets/products/zoloto/Ball Valves.jpg", productUrl: "https://www.zolotovalves.com/according-to-valve-type/#", features: ["Quarter turn", "Full bore", "Leak proof", "Easy operation"] },
+  { id: 44, name: "Strainers", category: "Plumbing", brand: "Zoloto", description: "Y-type strainers for filtering debris from piping systems.", image: "assets/products/zoloto/Strainers.jpg", productUrl: "https://www.zolotovalves.com/according-to-valve-type/#", features: ["Debris filtering", "Easy cleaning", "Durable", "Corrosion resistant"] },
+  { id: 45, name: "Butterfly Valves", category: "Plumbing", brand: "Zoloto", description: "Compact butterfly valves for flow regulation in large diameter pipes.", image: "assets/products/zoloto/Butterfly Valves.jpg", productUrl: "https://www.zolotovalves.com/according-to-valve-type/#", features: ["Compact design", "Large diameter", "Low torque", "Space saving"] },
+  { id: 46, name: "Pressure Reducing Valves", category: "Plumbing", brand: "Zoloto", description: "Automatic pressure reducing valves for maintaining constant downstream pressure.", image: "assets/products/zoloto/Pressure Reducing Valves.jpg", productUrl: "https://www.zolotovalves.com/according-to-valve-type/#", features: ["Pressure regulation", "Automatic operation", "Accurate control", "Reliable"] },
+  { id: 47, name: "Double Regulating Balancing Valves", category: "Plumbing", brand: "Zoloto", description: "Precision balancing valves for HVAC and hydronic systems.", image: "assets/products/zoloto/Double Regulating Balancing Valves.jpg", productUrl: "https://www.zolotovalves.com/according-to-valve-type/#", features: ["Precise balancing", "HVAC systems", "Flow measurement", "Premium quality"] },
+  { id: 48, name: "Fire Hydrant Valves / Landing Valves", category: "Plumbing", brand: "Zoloto", description: "Fire safety valves for fire fighting systems and hydrants.", image: "assets/products/zoloto/Fire Hydrant Valves_Landing Valves.jpg", productUrl: "https://www.zolotovalves.com/according-to-valve-type/#", features: ["Fire safety", "ISI certified", "Reliable", "Heavy duty"] },
+  { id: 49, name: "Transformer Valves", category: "Plumbing", brand: "Zoloto", description: "Specialized valves for transformer cooling systems.", image: "assets/products/zoloto/Transformer Valves.jpg", productUrl: "https://www.zolotovalves.com/according-to-valve-type/#", features: ["Specialized application", "Reliable operation", "Quality construction", "Long life"] },
+  { id: 50, name: "Steam Traps", category: "Plumbing", brand: "Zoloto", description: "Automatic steam traps for removing condensate from steam systems.", image: "assets/products/zoloto/Steam Traps.jpg", productUrl: "https://www.zolotovalves.com/according-to-valve-type/#", features: ["Automatic operation", "Energy saving", "Reliable", "Low maintenance"] },
+  { id: 51, name: "Needle Valves", category: "Plumbing", brand: "Zoloto", description: "Precision needle valves for fine flow control in instrumentation.", image: "assets/products/zoloto/Needle Valves.jpg", productUrl: "https://www.zolotovalves.com/according-to-valve-type/#", features: ["Fine control", "Precision machined", "Leak proof", "Instrumentation grade"] },
+  { id: 52, name: "Other Valves", category: "Plumbing", brand: "Zoloto", description: "Specialized valves for unique applications and requirements.", image: "assets/products/zoloto/Other Valves.jpg", productUrl: "https://www.zolotovalves.com/according-to-valve-type/#", features: ["Specialized solutions", "Custom applications", "Quality assured", "Reliable"] },
+  
+  // Nirali Products (3)
+  { id: 53, name: "Kitchen Sinks", category: "Kitchen Fittings", brand: "Nirali", description: "India's No.1 kitchen sink brand offering premium stainless steel sinks.", image: "assets/products/nirali/kitchen sink .jpg", productUrl: "https://niraling.com/shop/?swoof=1&pa_product=kitchen-sinks", features: ["Stainless steel", "Premium quality", "Modern designs", "Rust resistant"] },
+  { id: 54, name: "Floor Drains", category: "Bathroom Fittings", brand: "Nirali", description: "High-quality floor drains for efficient water drainage.", image: "assets/products/nirali/floor drains.jpg", productUrl: "https://niraling.com/shop/?swoof=1&pa_product=floor-drains", features: ["Efficient drainage", "Stainless steel", "Anti-clog design", "Durable"] },
+  { id: 55, name: "Kitchen Accessories", category: "Kitchen Fittings", brand: "Nirali", description: "Complete range of kitchen accessories and fittings.", image: "assets/products/nirali/Accessories .jpg", productUrl: "https://niraling.com/shop/?swoof=1&pa_product=accessories", features: ["Complete range", "Quality construction", "Modern designs", "Functional"] },
+  
+  // Faber Products (7)
+  { id: 56, name: "Chimneys", category: "Kitchen Appliances", brand: "Faber", description: "Premium kitchen chimneys for smoke-free cooking experience.", image: "assets/products/faber/Chimneys.jpg", productUrl: "https://faberindia.com/collections/kitchen-chimney-hoods", features: ["Powerful suction", "Silent operation", "Modern design", "Easy cleaning"] },
+  { id: 57, name: "Gas Appliances", category: "Kitchen Appliances", brand: "Faber", description: "High-performance gas hobs and cooktops for modern kitchens.", image: "assets/products/faber/Gas Appliances.jpg", productUrl: "https://faberindia.com/collections/gas-appliance", features: ["High efficiency", "Safety features", "Durable", "Modern design"] },
+  { id: 58, name: "Built-in Appliances", category: "Kitchen Appliances", brand: "Faber", description: "Premium built-in kitchen appliances for modular kitchens.", image: "assets/products/faber/Built in Appliances.jpg", productUrl: "https://faberindia.com/collections/built-in-appliances", features: ["Built-in design", "Premium quality", "Modern aesthetics", "Space saving"] },
+  { id: 59, name: "Dishwashers", category: "Kitchen Appliances", brand: "Faber", description: "Efficient dishwashers for spotless cleaning and hygiene.", image: "assets/products/faber/Dishwashers.jpg", productUrl: "https://faberindia.com/collections/dishwashers", features: ["Efficient cleaning", "Water saving", "Multiple programs", "Energy efficient"] },
+  { id: 60, name: "Water Heaters", category: "Kitchen Appliances", brand: "Faber", description: "Instant water heaters for kitchen and bathroom use.", image: "assets/products/faber/Water Heaters.jpg", productUrl: "https://faberindia.com/collections/water-heaters", features: ["Instant heating", "Energy efficient", "Compact design", "Safe operation"] },
+  { id: 61, name: "Water Purifiers", category: "Kitchen Appliances", brand: "Faber", description: "Advanced water purification systems for clean drinking water.", image: "assets/products/faber/Water Purifiers.jpg", productUrl: "https://faberindia.com/collections/water-purifiers", features: ["Multi-stage purification", "Safe drinking water", "Easy maintenance", "Healthy"] },
+  { id: 62, name: "Small Appliances", category: "Kitchen Appliances", brand: "Faber", description: "Range of small kitchen appliances for convenient cooking.", image: "assets/products/faber/Small Appliances.jpg", productUrl: "https://faberindia.com/collections/small-appliances", features: ["Convenient", "Compact design", "Versatile", "Quality construction"] },
+  
+  // Wilo Pumps Products (4)
+  { id: 63, name: "Cooling & Air Conditioning", category: "Plumbing", brand: "Wilo Pumps", description: "Pump solutions for cooling towers and air conditioning systems.", image: "assets/products/wilo/Cooling and air conditioning.jpg", productUrl: "https://wilo.com/in/en/Products-and-expertise/en/products-expertise?psx=sg_pr_app%7Csv_app_003", features: ["Energy efficient", "Reliable operation", "Low maintenance", "Quiet"] },
+  { id: 64, name: "Drainage & Sewage", category: "Plumbing", brand: "Wilo Pumps", description: "Submersible pumps for drainage and sewage applications.", image: "assets/products/wilo/Drainage and sewage.jpg", productUrl: "https://wilo.com/in/en/Products-and-expertise/en/products-expertise?psx=sg_pr_app%7Csv_app_005", features: ["Submersible", "Clog-free", "Durable", "Reliable"] },
+  { id: 65, name: "Heating Systems", category: "Plumbing", brand: "Wilo Pumps", description: "Circulation pumps for heating systems and hot water supply.", image: "assets/products/wilo/Heating.jpg", productUrl: "https://wilo.com/in/en/Products-and-expertise/en/products-expertise?psx=sg_pr_app%7Csv_app_007", features: ["Energy efficient", "Quiet operation", "Reliable", "Long life"] },
+  { id: 66, name: "Water Supply", category: "Plumbing", brand: "Wilo Pumps", description: "High-performance water supply pumps for residential and commercial use.", image: "assets/products/wilo/Water supply.jpg", productUrl: "https://wilo.com/in/en/Products-and-expertise/en/products-expertise?psx=sg_pr_app%7Csv_app_013", features: ["High performance", "Pressure control", "Energy saving", "Durable"] },
+  
+  // Ardex Endura Products (5)
+  { id: 67, name: "Tile & Stone Installations", category: "Building Materials", brand: "Ardex Endura", description: "Professional tile adhesives and installation systems.", image: "assets/products/ardex/Tile & Stone Installations.jpg", productUrl: "https://www.ardexendura.com/products/tile-and-stone-installations/", features: ["Professional grade", "Strong bonding", "Easy application", "Long-lasting"] },
+  { id: 68, name: "Waterproofing Systems", category: "Building Materials", brand: "Ardex Endura", description: "Complete waterproofing solutions for construction applications.", image: "assets/products/ardex/Waterproofing Systems.jpg", productUrl: "https://www.ardexendura.com/products/waterproofing-systems/", features: ["Complete protection", "Durable", "Easy application", "Reliable"] },
+  { id: 69, name: "Flooring Solutions", category: "Building Materials", brand: "Ardex Endura", description: "Self-leveling compounds and flooring solutions for perfect surfaces.", image: "assets/products/ardex/Flooring Solutions.jpg", productUrl: "https://www.ardexendura.com/products/flooring-solutions/", features: ["Self-leveling", "Perfect finish", "Fast setting", "Durable"] },
+  { id: 70, name: "Flooring Adhesives", category: "Building Materials", brand: "Ardex Endura", description: "High-strength adhesives for all types of flooring installations.", image: "assets/products/ardex/Flooring Adhesives.jpg", productUrl: "https://www.ardexendura.com/products/flooring-adhesives/", features: ["High strength", "Versatile", "Fast setting", "Reliable bonding"] },
+  { id: 71, name: "Concrete Repair, Anchors & Grouts", category: "Building Materials", brand: "Ardex Endura", description: "Specialized products for concrete repair and structural grouting.", image: "assets/products/ardex/Concrete Repair, Anchors & Grouts.jpg", productUrl: "https://www.ardexendura.com/products/concrete-repair-anchors-and-grouts/", features: ["Structural repair", "High strength", "Durable", "Professional grade"] },
+  
+  // Zero B Products (7)
+  { id: 72, name: "RO Water Purifiers", category: "Kitchen Appliances", brand: "Zero B", description: "Advanced RO water purifiers with multi-stage purification for safe drinking water.", image: "assets/products/zero/ro_water_purifiers.png", productUrl: "https://www.zerobonline.com/product-category/home-water-solution/ro-water-purifiers/", features: ["Multi-stage RO", "TDS control", "Safe drinking water", "Energy efficient"] },
+  { id: 73, name: "UV Water Purifiers", category: "Kitchen Appliances", brand: "Zero B", description: "UV purification systems that kill bacteria and viruses without chemicals.", image: "assets/products/zero/uv_water_purifiers.png", productUrl: "https://www.zerobonline.com/product-category/home-water-solution/uv-water-purifiers", features: ["UV purification", "Chemical-free", "Germ protection", "Easy maintenance"] },
+  { id: 74, name: "Iron Remover", category: "Kitchen Appliances", brand: "Zero B", description: "Specialized iron removal systems for water with high iron content, preventing stains and metallic taste.", image: "assets/products/zero/iron_remover.png", productUrl: "https://www.zerobonline.com/product-category/home-water-solution/iron-remover/", features: ["Iron removal", "Stain prevention", "Better taste", "Low maintenance"] },
+  { id: 75, name: "Water Softeners", category: "Kitchen Appliances", brand: "Zero B", description: "Automatic water softeners for hard water treatment and scale prevention.", image: "assets/products/zero/water_softeners.png", productUrl: "https://www.zerobonline.com/product-category/home-water-solution/water-softeners/", features: ["Hard water treatment", "Scale prevention", "Automatic regeneration", "Long-lasting"] },
+  { id: 76, name: "Non Electric Water Purifiers", category: "Kitchen Appliances", brand: "Zero B", description: "Gravity-based non-electric purifiers ideal for areas with power issues or outdoor use.", image: "assets/products/zero/non_electric_water_purifiers.png", productUrl: "https://www.zerobonline.com/product-category/home-water-solution/non-electric-water-purifier/", features: ["No electricity needed", "Portable", "Cost effective", "Reliable"] },
+  { id: 77, name: "Water Filters", category: "Kitchen Appliances", brand: "Zero B", description: "Complete range of water purification solutions for homes and offices.", image: "assets/products/zero/water_filters.png", productUrl: "https://www.zerobonline.com/product-category/home-water-solution/water-filters/", features: ["Multi-stage purification", "Safe drinking water", "Easy maintenance", "Reliable"] },
+  { id: 78, name: "Heat Pump", category: "Kitchen Appliances", brand: "Zero B", description: "Energy-efficient heat pump water heaters for eco-friendly hot water solutions.", image: "assets/products/zero/heat_pump.png", productUrl: "https://www.zerobonline.com/product-category/home-water-solution/heat-pump/", features: ["Energy efficient", "Eco-friendly", "Cost saving", "Reliable heating"] }
+];
+
+const categories = ["All", "Bathroom Fittings", "Kitchen Fittings", "Kitchen Appliances", "Plumbing", "Building Materials"];
+
+// Helper functions
+function getProductsByBrand(brandName) {
+  return products.filter(p => p.brand === brandName);
+}
+
+function getProductsByCategory(category) {
+  if (category === "All") return products;
+  return products.filter(p => p.category === category);
+}
+
+function searchProducts(query) {
+  const q = query.toLowerCase();
+  return products.filter(p => 
+    p.name.toLowerCase().includes(q) ||
+    p.description.toLowerCase().includes(q) ||
+    p.brand.toLowerCase().includes(q) ||
+    p.category.toLowerCase().includes(q)
+  );
+}
+
+function getBrandBySlug(slug) {
+  return brands.find(b => b.id === slug);
+}
+
+function filterProducts(options = {}) {
+  let result = [...products];
+  
+  if (options.category && options.category !== "All") {
+    result = result.filter(p => p.category === options.category);
+  }
+  
+  if (options.brand && options.brand !== "All") {
+    result = result.filter(p => p.brand === options.brand);
+  }
+  
+  if (options.search) {
+    const q = options.search.toLowerCase();
+    result = result.filter(p => 
+      p.name.toLowerCase().includes(q) ||
+      p.description.toLowerCase().includes(q) ||
+      p.brand.toLowerCase().includes(q)
+    );
+  }
+  
+  return result;
+}
