@@ -76,7 +76,7 @@ function renderFooter() {
           <div class="footer-col">
             <h4>About Us</h4>
             <p style="color: rgba(255,255,255,0.7); font-size: 0.875rem; line-height: 1.6;">
-              Tayyabi Stores is your trusted destination for premium sanitary ware and plumbing solutions. 
+              Tayyabi Stores is your trusted destination for premium sanitaryware and plumbing solutions. 
               Authorized dealers for top brands since 1990.
             </p>
           </div>
