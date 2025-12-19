@@ -104,9 +104,13 @@ function renderFooter() {
             <h4>Contact Info</h4>
             <ul>
               <li style="color: rgba(255,255,255,0.7);">Tayyabi Stores</li>
-              <li style="color: rgba(255,255,255,0.7);">Fateh Kadal, Srinagar</li>
-              <li style="color: rgba(255,255,255,0.7);">Jammu & Kashmir, India</li>
-              <li><a href="tel:+919419002090">+91 9419002090</a></li>
+              <li style="color: rgba(255,255,255,0.7);">30, Dana Oli Tayyabi Stores</li>
+              <li style="color: rgba(255,255,255,0.7);">Madhya Pradesh, India</li>
+              <li><a href="tel:+919826078061">+91 9826078061</a></li>
+               <li style="color: rgba(255,255,255,0.7);">Tayyabi Stores</li>
+              <li style="color: rgba(255,255,255,0.7);">7, Madhav villa, Above IDBI Bank</li>
+              <li style="color: rgba(255,255,255,0.7);">Madhya Pradesh, India</li>
+              <li><a href="tel:+918827417253">+91 8827417253</a></li>
             </ul>
           </div>
         </div>
@@ -124,10 +128,10 @@ const chatbotKnowledge = {
   
   responses: {
     // Store info
-    location: "We're located at Fateh Kadal, Srinagar, Jammu & Kashmir, India - 190001. Come visit us!",
-    address: "We're located at Fateh Kadal, Srinagar, Jammu & Kashmir, India - 190001. Come visit us!",
-    hours: "Our business hours are:\n- Monday to Saturday: 9:00 AM - 7:00 PM\n- Sunday: 10:00 AM - 2:00 PM",
-    timing: "Our business hours are:\n- Monday to Saturday: 9:00 AM - 7:00 PM\n- Sunday: 10:00 AM - 2:00 PM",
+    location: "We're located at 30, Dana Oli, Neemuch, Madhya Pradesh, India - 458441. Come visit us!",
+    address: "We're located at 30, Dana Oli, Neemuch, Madhya Pradesh, India - 458441. Come visit us!",
+    hours: "Our business hours are:\n- Monday to Saturday: 10:00 AM - 8:00 PM\n- Sunday: 10:00 AM - 2:00 PM",
+    timing: "Our business hours are:\n- Monday to Saturday: 10:00 AM - 8:00 PM\n- Sunday: 10:00 AM - 2:00 PM",
     contact: "You can reach us at:\n- Phone: +91 9419002090 or +91 9419003090\n- Email: info@tayyabistore.com\n- Visit: Fateh Kadal, Srinagar",
     phone: "Call us at +91 9419002090 or +91 9419003090. We're happy to help!",
     
